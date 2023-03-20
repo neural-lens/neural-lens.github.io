@@ -1,1 +1,1 @@
-# neural-lens.github.io
+# neural-lens

@@ -10,6 +10,16 @@
                                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>NeuralLens</title>
 
+        <style>
+            .citation .description {
+              font-family: "Courier",monospace;
+              font-size: 15px;
+              white-space: pre;
+              text-align: left;
+            }
+          </style>
+        </head>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111714927-1"></script>
         <script>
@@ -30,6 +40,12 @@
                 </div>
             </div>
 
+            <div class='row mt-1 mt-2' >
+                <div class='col text-center'>
+                    <p>CVPR 2023</p>
+                </div>
+            </div>
+
             <!-- authors -->
             <div class='row text-center h5 font-weight-bold pl-4 pr-4 mb-4'>
                 <a class="col-md-3" href="https://www.cs.cornell.edu/~wenqixian/"><span>Wenqi Xian</span></a>
@@ -38,15 +54,12 @@
                 <a class="col-md-3" href="https://christophlassner.de/"><span>Christoph Lassner</span></a>
             </div>
 
-
             <!-- affiliations -->
-            <div class='row mt-1 mt-2' >
-                <div class='col text-center'>
-                    <p class="h5 font-weight-light">
-                    <a class="ml-4" href="https://tech.cornell.edu"><span>Cornell Tech</span></a>
-                    <a class="mr-4 ml-4" href="https://about.meta.com/realitylabs/"><span>Meta Reality Labs</span></a>
-                    </p>
-                </div>
+            <div class='row text-center h6 font-weight-light pl-4 pr-4 mb-4' >
+                <a class="col"><span>Cornell Tech</span></a>
+                <a class="col"><span>Meta Reality Labs</span></a>
+                <a class="col"><span>Cornell Tech</span></a>
+                <a class="col"><span>Meta Reality Labs</span></a>
             </div>
 
             <div class='row justify-content-center'  style="position: relative; width: 100%;height: 0;padding-bottom: 25%; margin:0">
@@ -71,20 +84,20 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col">
-                            <a class="h5" href="https://github.com" style="margin-right:10px">
-                                <span>[Code]</span>
+                            <a class="h5" href="" style="margin-right:10px">
+                                <span>[Paper]</span>
                             </a>
-                            <a class="h5" href="cite.bib" target="_blank">
-                                <span>[Bibtex]</span>
+                            <a class="h5" href="#citation" target="_blank">
+                                <span>[BibTeX]</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class='col-md-9 col-sm-9 col-xs-12'>
-                    <p class='h4 font-weight-bold '>Abstract</p>
+                    <p class='h4 font-weight-bold'>Abstract</p>
                     <p class="text-break">
-                        Recent methods for 3D reconstruction and rendering increasingly 
-                        benefit from end-to-end optimization of the entire
+                        Recent methods for 3D reconstruction and rendering in
+                        creasingly benefit from end-to-end optimization of the entire
                         image formation process. However, this approach is
                         currently limited: effects of the optical hardware stack and in
                         particular lenses are not being modeled in a differentiable
@@ -182,23 +195,24 @@
                 </div>
             </div>
 
-            <div class='row mt-3'>
+            <div class='row mt-2'>
                 <!-- <div class='col-2 mx-2'>
                     <img src="assets/box.gif" style="position: absolute;width: 100%; left: 0; top: 0;padding-bottom: 22%;">
                 </div> -->
-                <div class="col-2 mx-2">
+                <!-- <div class="col-2 mx-2">
                     <video autoplay muted  class="video__item img-fluid rounded mx-auto d-block" style="position: absolute;width: 100%; left: 0; top: 0;padding-bottom: 22%;" controls>
                     <source src="assets/box.mp4" type="video/mp4">
                     </video>
-                </div>
+                </div> -->
                 <div class='col-3 mx-2'>
                     <img src="assets/pattern.png" style="position: absolute;width: 100%; left: 0; top: 0;padding-bottom: 22%;">
                 </div>
-                <div class='col-6 mx-2'>
+                <div class='col-8 mx-3'>
                     <p class="text-break" style="padding-bottom: 5%;padding-top: 5%;">
                         We also proposed:
                         <b>A new marker</b> that can be jointly optimzed with a keypoint detector to increase the robustness of pattern-based calibration;
-                        <b>A large scale camera lens benchmark</b> for evaluating the performance of marker detection and camera calibration.
+                        <br>
+                        <b><a href="">A large scale camera lens benchmark</a></b> for evaluating the performance of marker detection and camera calibration.
                     </p>
                 </div>
             </div>
@@ -218,9 +232,11 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row mt-4'>
                 <div class='col'>
                     Our model can also be optimized using point correspondences for keypoint pairs obtained using calibration targets, as well as gradients from a set of 2D image observations.
+                    Here we show a timelapse of the optimization process. Blue: ground truth keypoint positions, orange: predicted keypoint
+                    positions. For lens distortion visualization, Hue: offset direction, saturation: offset magnitude.
                 </div>
             </div>
 
@@ -235,7 +251,7 @@
                 </div> -->
             </div>
 
-            <div class='row'>
+            <div class='row mt-4'>
                 <div class='col'>
                     We integrate our
                     neural lens model into a neural rendering framework
@@ -252,17 +268,45 @@
             </div>
         </div>
 
-        <!-- Ack -->
         <div>
             <hr>
 
             <div class='row mb-5 text-center'>
                 <div class='col'>
                     <p class='h2'>Acknowledgements</p>
-                    <p></p>
+                    <br>
+                    <p>Part of the work done during an internship at Meta Reality Labs. We thank Guandao Yang and Zhaoyang Lv for help and discussion. </p>
                 </div>
             </div>
         </div>
+
+        <div>
+            <hr>
+            <div class='row mb-5 text-center content-block citation' id='citation'>
+                <div class='col'>
+                    <p class='h2'>Citation</p>
+                    <p></p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                      <p class="description">
+                                @InProceedings{Xian_2023_CVPR,
+                                    author    = {Xian, Wenqi
+                                                and Bo{\v{z}}i{\v{c}}, Alja{\v{z}}
+                                                and Snavely, Noah
+                                                and Lassner, Christoph},
+                                    title     = {Neural Lens Modeling},
+                                    booktitle = {Proceedings of the IEEE/CVF Conference
+                                                on Computer Vision and Pattern Recognition (CVPR)},
+                                    year      = {2023},
+                                }
+                      </p>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
